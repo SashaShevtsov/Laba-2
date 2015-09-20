@@ -16,9 +16,20 @@ double myPi(double e)
 	}
 	return pi;
 }
-
+void Test(double e)
+{
+	double pi = myPi(e);
+	if (fabs(pi - acos(-1)) < e)
+		cout << "OK" << endl;
+	else
+		cout << "False" << endl;
+}
 
 void main()
 {
+	Test(0.3);
+	Test(0.023);
+	Test(0.9);
+	Test(0.55);
 }
 

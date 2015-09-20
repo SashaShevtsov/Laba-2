@@ -15,7 +15,17 @@ int MyNumberofZeros(int n)
 	}
 	return mynumberofzeros;
 }
-
+void Test(int n, int numberofzeros)
+{
+	if (MyNumberofZeros(n) == numberofzeros)
+		cout << "OK" << endl;
+	else
+		cout << "False" << endl;
+}
 void main()
 {
+	Test(4, 0);
+	Test(10, 2);
+	Test(25, 6);
+	Test(100, 24);
 }
